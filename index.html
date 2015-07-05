@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+<title>HTML5Player by José Olinda</title>
+<link rel="stylesheet" href="fontes/icomoon/style.css">
+</head>
+<body> 
+<div id="player">
+  <div id="reproducao">
+    <div id="topo">
+      <span class="controle icon-menu esquerda" id="playlist"></span>
+      <div id="volume">
+        <span id="mudo" class="controle icon-mute"></span>
+        <div id="vol-progresso">
+          <input type="range" id="nivel-volume" max="100" min="0" step="0.01" value="60">
+        </div>
+        <span id="vol-max" class="controle icon-volume"></span>
+      </div>
+      <span id="parar" class="controle icon-stop direita ativo"></span>
+    </div>
+    <div id="meio">
+      <span id="play" class="controle icon-play"></span>
+    </div>
+  </div>
+  <div id="base">
+    <div id="informacoes">
+      <span id="titulo">Thunderstruck</span>
+      <span id="artista">AC/DC</span>
+    </div>
+    <div id="setas">
+      <span id="anterior" class="controle icon-arrow-left esquerda"></span>
+      <span id="proximo" class="controle icon-arrow-right direita"></span>
+    </div>
+    <div id="funcoes">
+      <span id="repetir" class="icon-repeat"></span>
+      <span id="aleatorio" class="icon-shuffle"></span>
+    </div>
+    <div id="duracao">
+      <audio id="audio" preload loop>
+        <source src="https://raw.githubusercontent.com/joseolinda/HTML5Player/master/musicas/Coldplay%20-%20Fix%20You.mp3" type="audio/mpeg">
+      </audio>
+      <input type="range" id="m-progresso" max="100" min="0" step="0.01" value="0">
+      <span id="m-tempo-duracao" class="direita tempo">00:00</span>
+      <span id="m-tempo-atual" class="equerda tempo">00:00</span>
+    </div>
+  </div>
+</div>
+</body> 
+</html>
