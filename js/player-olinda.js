@@ -119,7 +119,7 @@ function contarTempo() {
   }
 }
 
-play.onclick = function tocar(m) {
+play.onclick = function tocar() {
   audio.src = m;
   var classPlay = play.classList; 
   if (classPlay == 'controle icon-play'){
