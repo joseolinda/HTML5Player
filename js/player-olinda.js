@@ -80,7 +80,7 @@ volMaximo.onclick = function() {
 
 playlist.onclick = function exibirPlaylist() {
     var mostrarPlaylist = document.getElementById('mostrar-playlist');
-    mostrarPlaylist.classList.toogle('exibir');
+    mostrarPlaylist.classList.toggle('exibir');
 }
 
 play.style.visibility = "hidden";
