@@ -178,7 +178,7 @@ body {
 }
 
 .exibir {
-  display: block;
+  display: block !important;
   visibility: visible;
 }
 /* RANGE */
