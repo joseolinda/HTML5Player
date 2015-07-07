@@ -176,6 +176,11 @@ body {
 .direita {
   float: right;
 }
+
+.exibir {
+  display: block;
+  visibility: visible;
+}
 /* RANGE */
 
 input[type=range] {
