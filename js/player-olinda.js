@@ -20,6 +20,20 @@ function volume() {
   audio.volume = Math.floor(nivelVolume.value)/100;
 }
 
+function tocar() {
+    audio.play();
+    parar.classList.remove('ativo');
+    play.classList.remove('icon-play');
+    play.classList.add('icon-pause');
+    contarTempo();
+}
+
+function pausar() {
+    audio.pause();
+    play.classList.remove('icon-pause');
+    play.classList.add('icon-play');
+}
+
 nivelVolume.onchange = function() {
   volume();
   verificaMaximo();
@@ -119,18 +133,12 @@ function contarTempo() {
   }
 }
 
-play.onclick = function tocar() {
+play.onclick = function() {
   var classPlay = play.classList; 
   if (classPlay == 'controle icon-play'){
-    audio.play();
-    parar.classList.remove('ativo');
-    play.classList.remove('icon-play');
-    play.classList.add('icon-pause');
-    contarTempo();
+    tocar();
   } else if (classPlay == 'controle icon-pause'){
-    audio.pause();
-    play.classList.remove('icon-pause');
-    play.classList.add('icon-play');
+    pausar();
   }
 };
   
