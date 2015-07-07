@@ -16,6 +16,12 @@ var playlist = document.getElementById('playlist'),
     mTempoDuracao = document.getElementById('m-tempo-duracao'),
     mProgresso = document.getElementById('m-progresso');
 
+nivelVolume.onchange = function() {
+  volume();
+  verificaMaximo();
+  verificaMudo();
+};
+
 function volume() {
   audio.volume = Math.floor(nivelVolume.value)/100;
 }
@@ -33,12 +39,6 @@ function pausar() {
     play.classList.remove('icon-pause');
     play.classList.add('icon-play');
 }
-
-nivelVolume.onchange = function() {
-  volume();
-  verificaMaximo();
-  verificaMudo();
-};
 
 function verificaMudo() {
   if (audio.muted || audio.volume == 0) {
@@ -78,6 +78,11 @@ volMaximo.onclick = function() {
     verificaMaximo();
 };
 
+playlist.onclick = function exibirPlaylist() {
+    var mostrarPlaylist = document.getElementById('mostrar-playlist');
+    mostrarPlaylist.classList.toogle('exibir');
+}
+
 play.style.visibility = "hidden";
 
 audio.onloadedmetadata = function() {
@@ -98,10 +103,6 @@ function verificaUnidade(tempo) {
   if (tempo.length < 2) tempo = "0" + tempo;
   return tempo;
 }
-
-playlist.onclick = function () {
-  playlist.classList.toggle('ativo');
-};
 
 parar.onclick = function () {
   parar.classList.toggle('ativo');
