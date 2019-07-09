@@ -13,7 +13,7 @@ body {
   min-width: 200px;
   width: 100%;
   margin: 25px auto;
-  background: url('http://fondosdeestrellasdelrock.com/wp-content/uploads/images/46/acdc-1__400x300.jpg') no-repeat center center;
+  background: url(../img/covers/rock-party.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -97,6 +97,7 @@ body {
   padding: 25px 20px 20px;
   display: block;
   margin: 0 auto;
+  z-index: 9999;
 }
 
 #base {
